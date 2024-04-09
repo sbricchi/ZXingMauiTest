@@ -10,7 +10,7 @@ public partial class MainPage : ContentPage
 
         cameraBarcodeReaderView.Options = new BarcodeReaderOptions
         {
-            Formats = BarcodeFormats.OneDimensional,
+            Formats = BarcodeFormat.QrCode,
             AutoRotate = true,
             Multiple = true
         };
@@ -22,7 +22,9 @@ public partial class MainPage : ContentPage
         if (res != null)
         {
             Console.WriteLine($"Barcodes: {res.Format} -> {res.Value}");
-            DisplayAlert("Resultado", $"Contenido del {res.Format} -> {res.Value}", "OK");
+            Dispatcher.Dispatch(async () =>
+                await DisplayAlert("Resultado", $"Contenido del {res.Format} -> {res.Value}", "OK")
+            );
         }
     }
 }
