@@ -1,23 +1,28 @@
-﻿namespace ZXingMauiTest;
+﻿using ZXing.Net.Maui;
+
+namespace ZXingMauiTest;
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
-
     public MainPage()
     {
         InitializeComponent();
+
+        cameraBarcodeReaderView.Options = new BarcodeReaderOptions
+        {
+            Formats = BarcodeFormats.OneDimensional,
+            AutoRotate = true,
+            Multiple = true
+        };
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+    protected void BarcodesDetected(object sender, BarcodeDetectionEventArgs e)
     {
-        count++;
-
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
-        else
-            CounterBtn.Text = $"Clicked {count} times";
-
-        SemanticScreenReader.Announce(CounterBtn.Text);
+        var res = e.Results?.FirstOrDefault();
+        if (res != null)
+        {
+            Console.WriteLine($"Barcodes: {res.Format} -> {res.Value}");
+            DisplayAlert("Resultado", $"Contenido del {res.Format} -> {res.Value}", "OK");
+        }
     }
 }

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXingMauiTest", "ZXingMauiTest\ZXingMauiTest.csproj", "{3393CBF8-5792-456D-9980-EC3A9EEBF0CA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXing.Net.MAUI.Controls", "..\ZXing.Net.Maui.BAMinds\ZXing.Net.MAUI.Controls\ZXing.Net.MAUI.Controls.csproj", "{6566B5E4-8E8A-4F03-8798-AD0FA58BC414}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXing.Net.MAUI", "..\ZXing.Net.Maui.BAMinds\ZXing.Net.MAUI\ZXing.Net.MAUI.csproj", "{DC0C31A6-48B5-4939-AA4D-80398E054423}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{3393CBF8-5792-456D-9980-EC3A9EEBF0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3393CBF8-5792-456D-9980-EC3A9EEBF0CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3393CBF8-5792-456D-9980-EC3A9EEBF0CA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6566B5E4-8E8A-4F03-8798-AD0FA58BC414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6566B5E4-8E8A-4F03-8798-AD0FA58BC414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6566B5E4-8E8A-4F03-8798-AD0FA58BC414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6566B5E4-8E8A-4F03-8798-AD0FA58BC414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0C31A6-48B5-4939-AA4D-80398E054423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0C31A6-48B5-4939-AA4D-80398E054423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0C31A6-48B5-4939-AA4D-80398E054423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0C31A6-48B5-4939-AA4D-80398E054423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
